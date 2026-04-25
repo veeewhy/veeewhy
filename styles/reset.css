@@ -1,0 +1,126 @@
+@layer reset, base, tokens, layout, components, utilities, overrides;
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	:where(*:not(dialog)) {
+		margin: 0;
+	}
+
+	* {
+		padding: 0;
+		font: inherit;
+	}
+
+	html {
+		-moz-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+		color-scheme: light dark;
+		hanging-punctuation: first last;
+		scrollbar-gutter: stable;
+		scrollbar-width: thin;
+		min-inline-size: 20rem;
+	}
+
+	body {
+		min-block-size: 100svh;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img,
+	picture,
+	svg,
+	video,
+	canvas {
+		display: block;
+		max-width: 100%;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.1;
+		text-wrap: balance;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p,
+	li,
+	figcaption {
+		text-wrap: pretty;
+	}
+
+	ul[role='list'],
+	ol[role='list'] {
+		list-style: none;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	blockquote,
+	q {
+		quotes: none;
+	}
+
+	blockquote::before,
+	blockquote::after,
+	q::before,
+	q::after {
+		content: '';
+		content: none;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	textarea:not([rows]) {
+		min-height: 10em;
+		resize: vertical;
+	}
+
+	a:not([class]) {
+		text-decoration-skip-ink: auto;
+		color: currentColor;
+	}
+
+	:target {
+		scroll-margin-block: 5ex;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			interpolate-size: allow-keywords;
+		}
+
+		:has(:target) {
+			scroll-behavior: smooth;
+			scroll-padding-top: 3rem;
+		}
+	}
+}

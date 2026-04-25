@@ -1,0 +1,9 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-URsdSV1VWDt1g4M7IlZ4jD20Tmtkc3HCKAwVJ9AQqk8=' 'sha256-9Z6w2U8aA8z7MEhRCA/TfQ0nlt/0evk9Bma2mdosvPw='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

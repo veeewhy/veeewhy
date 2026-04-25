@@ -1,0 +1,309 @@
+@layer reset, base, tokens, layout, components, utilities, overrides;
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/InterVariable.woff2') format('woff2-variations');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@layer tokens {
+	:root {
+		--ref-color-gray-0: oklch(0% 0.004 75);
+		--ref-color-gray-4: oklch(4% 0.004 75);
+		--ref-color-gray-8: oklch(8% 0.004 75);
+		--ref-color-gray-12: oklch(12% 0.004 75);
+		--ref-color-gray-16: oklch(16% 0.004 75);
+		--ref-color-gray-20: oklch(20% 0.004 75);
+		--ref-color-gray-24: oklch(24% 0.004 75);
+		--ref-color-gray-29: oklch(29% 0.004 75);
+		--ref-color-gray-34: oklch(34% 0.004 75);
+		--ref-color-gray-40: oklch(40% 0.004 75);
+		--ref-color-gray-46: oklch(46% 0.004 75);
+		--ref-color-gray-52: oklch(52% 0.004 75);
+		--ref-color-gray-58: oklch(58% 0.004 75);
+		--ref-color-gray-64: oklch(64% 0.004 75);
+		--ref-color-gray-70: oklch(70% 0.004 75);
+		--ref-color-gray-75: oklch(75% 0.004 75);
+		--ref-color-gray-80: oklch(80% 0.004 75);
+		--ref-color-gray-84: oklch(84% 0.004 75);
+		--ref-color-gray-88: oklch(88% 0.004 75);
+		--ref-color-gray-91: oklch(91% 0.004 75);
+		--ref-color-gray-94: oklch(94% 0.004 75);
+		--ref-color-gray-96: oklch(96% 0.004 75);
+		--ref-color-gray-98: oklch(98% 0.004 75);
+		--ref-color-gray-100: oklch(100% 0.004 75);
+
+		--ref-color-amber-88: oklch(0.88 0.126 81);
+
+		--sys-color-surface: light-dark(var(--ref-color-gray-98), var(--ref-color-gray-8));
+
+		--sys-color-on-surface: light-dark(var(--ref-color-gray-12), var(--ref-color-gray-94));
+		--sys-color-on-surface-variant: light-dark(var(--ref-color-gray-40), var(--ref-color-gray-80));
+
+		--sys-color-outline: light-dark(var(--ref-color-gray-70), var(--ref-color-gray-52));
+		--sys-color-outline-variant: light-dark(var(--ref-color-gray-91), var(--ref-color-gray-24));
+
+		--sys-color-primary: light-dark(var(--ref-color-gray-20), var(--ref-color-gray-80));
+		--sys-color-secondary: var(--ref-color-amber-88);
+
+		--sys-color-on-selection: light-dark(var(--sys-color-on-surface), var(--sys-color-surface));
+
+		--sys-space-002: 0.125rem;
+		--sys-space-004: 0.25rem;
+		--sys-space-008: 0.5rem;
+		--sys-space-012: 0.75rem;
+		--sys-space-016: 1rem;
+		--sys-space-024: 1.5rem;
+		--sys-space-032: 2rem;
+		--sys-space-040: 2.5rem;
+		--sys-space-056: 3.5rem;
+		--sys-space-064: 4rem;
+		--sys-space-096: 6rem;
+		--sys-space-120: 7.5rem;
+
+		--sys-type-size-014: 0.875rem;
+		--sys-type-size-016: 1rem;
+		--sys-type-size-020: 1.25rem;
+		--sys-type-size-024: 1.5rem;
+
+		--sys-type-body: clamp(0.875rem, 0.83rem + 0.19cqi, 1rem);
+		--sys-type-display: clamp(2rem, 1.65rem + 1.5cqi, 3rem);
+
+		color-scheme: light dark;
+	}
+
+	[data-theme='light'] {
+		color-scheme: light;
+	}
+
+	[data-theme='dark'] {
+		color-scheme: dark;
+	}
+}
+
+@layer base {
+	body {
+		font-family:
+			'Inter',
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			sans-serif;
+		font-size: var(--sys-type-body);
+		font-feature-settings: 'ss02', 'cv01', 'cv06', 'cv09', 'calt';
+		line-height: 1.5;
+		color: var(--sys-color-on-surface);
+		background: var(--sys-color-surface);
+		container-type: inline-size;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-color: var(--sys-color-outline);
+		text-underline-offset: var(--sys-space-002);
+		transition: text-decoration-color 180ms ease-out;
+	}
+
+	a:hover {
+		text-decoration-color: var(--sys-color-on-surface-variant);
+	}
+
+	:focus-visible {
+		outline: var(--sys-space-002) solid var(--sys-color-primary);
+		outline-offset: var(--sys-space-004);
+		border-radius: var(--sys-space-002);
+	}
+
+	::selection {
+		background: var(--sys-color-secondary);
+		color: var(--sys-color-on-selection);
+	}
+
+	.icon {
+		font-family: 'Material Symbols Rounded';
+		font-weight: normal;
+		font-style: normal;
+		font-size: clamp(var(--sys-type-size-020), 1.16rem + 0.38svi, var(--sys-type-size-024));
+		line-height: 1;
+		letter-spacing: normal;
+		text-transform: none;
+		display: inline-block;
+		white-space: nowrap;
+		word-wrap: normal;
+		direction: ltr;
+		font-feature-settings: 'liga';
+		-webkit-font-smoothing: antialiased;
+		-webkit-user-select: none;
+		user-select: none;
+		font-variation-settings:
+			'FILL' 0,
+			'wght' 256,
+			'GRAD' 0,
+			'opsz' 24;
+	}
+
+	.icon::before {
+		content: 'desktop_windows';
+	}
+
+	[data-theme='light'] .icon::before {
+		content: 'light_mode';
+	}
+
+	[data-theme='dark'] .icon::before {
+		content: 'dark_mode';
+	}
+
+	.sr-only {
+		position: absolute;
+		inline-size: 1px;
+		block-size: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+}
+
+@layer layout {
+	.wrapper {
+		block-size: 100svb;
+		inline-size: min(100%, 72ch);
+		margin-inline: auto;
+		display: grid;
+		grid-template-rows: auto minmax(0, 1fr) auto;
+		padding-inline: var(--sys-space-032);
+		padding-block-start: clamp(var(--sys-space-056), 2.1rem + 6svi, var(--sys-space-120));
+		padding-block-end: clamp(var(--sys-space-024), 6svi, var(--sys-space-040));
+	}
+}
+
+@layer components {
+	.site-header {
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+		gap: var(--sys-space-004);
+	}
+
+	.site-header__name {
+		font-weight: 500;
+		letter-spacing: -0.01em;
+	}
+
+	.site-header__tagline {
+		font-size: var(--sys-type-size-014);
+		color: var(--sys-color-on-surface-variant);
+		font-weight: 400;
+	}
+
+	.stage {
+		display: grid;
+		grid-template-rows: 1fr auto 2fr;
+
+		& > div {
+			display: grid;
+			grid-row: 2 / 3;
+			gap: var(--sys-space-024);
+		}
+	}
+
+	.display {
+		font-size: var(--sys-type-display);
+		font-weight: 400;
+		letter-spacing: -0.01em;
+	}
+
+	.subcopy {
+		color: var(--sys-color-on-surface);
+		line-height: 1.8;
+
+		& > .emphasis {
+			font-style: italic;
+		}
+	}
+
+	.site-footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+		color: var(--sys-color-on-surface-variant);
+	}
+
+	.site-footer__location[data-size='long'] {
+		@container (inline-size < 30rem) {
+			display: none;
+		}
+	}
+
+	.site-footer__location[data-size='short'] {
+		@container (inline-size >= 30rem) {
+			display: none;
+		}
+	}
+
+	.site-footer__social {
+		display: flex;
+		list-style: none;
+		gap: clamp(var(--sys-space-012), 0.49rem + 1.13svi, var(--sys-space-024));
+	}
+
+	.site-footer__social a {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.theme-switcher {
+		position: fixed;
+		inset-block-start: var(--sys-space-016);
+		inset-inline-end: var(--sys-space-024);
+		aspect-ratio: 1;
+		display: inline-grid;
+		place-items: center;
+		padding: var(--sys-space-008);
+		background: transparent;
+		color: var(--sys-color-on-surface-variant);
+		border: 1px solid transparent;
+		border-color: var(--sys-color-outline-variant);
+		border-radius: 0.75rem;
+		cursor: pointer;
+		transition:
+			color 180ms ease,
+			border-color 180ms ease,
+			background-color 180ms ease;
+	}
+
+	.theme-switcher:hover {
+		color: var(--sys-color-on-surface);
+		border-color: var(--sys-color-outline);
+	}
+}
+
+@layer overrides {
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	@media (forced-colors: active) {
+		:focus-visible {
+			outline-color: Highlight;
+		}
+
+		.theme-switcher {
+			border: 1px solid ButtonBorder;
+			color: ButtonText;
+		}
+	}
+}

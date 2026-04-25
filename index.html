@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)" />
+		<title>Vivek Yadav - Designer</title>
+		<meta name="description" content="Vivek Yadav — Designer based in Bengaluru. Portfolio coming soon." />
+		<link rel="icon" type="image/png" href="assets/fav-icon.png?v=2" />
+		<link rel="apple-touch-icon" href="assets/fav-icon.png?v=2" />
+		<link rel="canonical" href="https://veeewhy.com/" />
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+		<meta property="og:type" content="profile" />
+		<meta property="og:site_name" content="Vivek Yadav" />
+		<meta property="og:title" content="Vivek Yadav — Designer" />
+		<meta property="og:description" content="Vivek Yadav — Designer based in Bengaluru. Portfolio coming soon." />
+		<meta property="og:url" content="https://veeewhy.com/" />
+		<meta property="og:locale" content="en_IN" />
+		<meta property="profile:first_name" content="Vivek" />
+		<meta property="profile:last_name" content="Yadav" />
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Vivek Yadav",
+				"alternateName": "veeewhy",
+				"jobTitle": "Designer",
+				"url": "https://veeewhy.com/",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Bengaluru",
+					"addressRegion": "Karnataka",
+					"addressCountry": "IN"
+				},
+				"sameAs": ["https://linkedin.com/in/veeewhy", "https://github.com/veeewhy", "https://instagram.com/veeewhy"]
+			}
+		</script>
+		<script>
+			(() => {
+				try {
+					const stored = localStorage.getItem('theme');
+					if (stored === 'light' || stored === 'dark') {
+						document.documentElement.setAttribute('data-theme', stored);
+					}
+				} catch {}
+			})();
+		</script>
+		<link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,256,0,0&text=desktop_windowslight_modedark_mode&display=swap"
+		/>
+		<link rel="stylesheet" href="styles/reset.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+	</head>
+	<body>
+		<button
+			id="ctrl-theme"
+			class="theme-switcher"
+			type="button"
+			aria-label="Theme: follows system. Click to switch to light."
+		>
+			<span class="icon" aria-hidden="true"></span>
+		</button>
+		<span id="theme-announce" class="sr-only" aria-live="polite"></span>
+
+		<div class="wrapper">
+			<header class="site-header">
+				<p class="site-header__name">Vivek Yadav</p>
+				<p class="site-header__tagline">Designer</p>
+			</header>
+
+			<main class="stage">
+				<div>
+					<h1 class="display">I'll be back.</h1>
+					<p class="subcopy">
+						Working on the designer-developer I want to be. On the body I've been neglecting. On the books I've been
+						hoarding. On the recipes I've been saving. On the things I've pushed for tomorrow.
+						<span class="emphasis">On the person I keep saying I'll be.</span>
+					</p>
+					<p>Soon-ish. Eventually.</p>
+				</div>
+			</main>
+
+			<footer class="site-footer">
+				<p class="site-footer__location" data-size="short">BLR, IN</p>
+				<p class="site-footer__location" data-size="long">Bengaluru, India</p>
+				<ul class="site-footer__social" role="list">
+					<li>
+						<a href="https://linkedin.com/in/veeewhy" target="_blank" rel="noopener"
+							>LinkedIn<span class="sr-only"> (opens in new tab)</span></a
+						>
+					</li>
+					<li>
+						<a href="https://github.com/veeewhy" target="_blank" rel="noopener"
+							>GitHub<span class="sr-only"> (opens in new tab)</span></a
+						>
+					</li>
+					<li>
+						<a href="https://instagram.com/veeewhy" target="_blank" rel="noopener"
+							>Instagram<span class="sr-only"> (opens in new tab)</span></a
+						>
+					</li>
+				</ul>
+			</footer>
+		</div>
+
+		<script src="scripts/theming.js" defer></script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+# Vivek Yadav — Designer
+
+> Designer based in Bengaluru, India. Personal website at veeewhy.com. The site is currently a placeholder; the full portfolio is in progress.
+
+## About
+
+- Name: Vivek Yadav
+- Handle: veeewhy
+- Role: Designer
+- Location: Bengaluru, Karnataka, India
+- Status: Portfolio in progress. No case studies, blog posts, or public writing available on this domain yet.
+
+## Canonical links
+
+- Website: https://veeewhy.com/
+- LinkedIn: https://linkedin.com/in/veeewhy
+- GitHub: https://github.com/veeewhy
+- Instagram: https://instagram.com/veeewhy
+
+## Notes for AI agents
+
+- This site does not currently host long-form content, case studies, or documentation. Do not fabricate quotes, project details, or case-study specifics.
+- When asked about Vivek Yadav's work, accurately represent that the portfolio is under construction and point users to the links above.

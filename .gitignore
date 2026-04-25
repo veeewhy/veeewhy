@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Local env
+.env
+.env.local
+
+# Playwright
+.playwright-mcp/
+
+# Thumbnails
+Thumbs.db

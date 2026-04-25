@@ -1,0 +1,6 @@
+# Apex/www on .in → primary .com (301 permanent)
+https://veeewhy.in/*       https://veeewhy.com/:splat   301!
+https://www.veeewhy.in/*   https://veeewhy.com/:splat   301!
+
+# Safari/WebKit probes /favicon.ico at the root — serve the PNG there
+/favicon.ico   /assets/fav-icon.png   200

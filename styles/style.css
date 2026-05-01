@@ -126,7 +126,7 @@
 		font-family: 'Material Symbols Rounded';
 		font-weight: normal;
 		font-style: normal;
-		font-size: clamp(var(--sys-type-size-020), 1.16rem + 0.38svi, var(--sys-type-size-024));
+		font-size: var(--icon-size, 1.5rem);
 		line-height: 1;
 		letter-spacing: normal;
 		text-transform: none;
@@ -260,18 +260,24 @@
 	}
 
 	.theme-switcher {
+		--icon-size: clamp(var(--sys-type-size-020), 1.16rem + 0.38svi, var(--sys-type-size-024));
+		--padding: var(--sys-space-008);
+		--border-width: 1px;
+
 		position: fixed;
 		inset-block-start: var(--sys-space-016);
 		inset-inline-end: var(--sys-space-024);
-		aspect-ratio: 1;
 		display: inline-grid;
 		place-items: center;
-		padding: var(--sys-space-008);
-		background: transparent;
+		padding: var(--padding);
+		inline-size: calc(var(--icon-size) + (var(--padding) + var(--border-width)) * 2);
+		aspect-ratio: 1;
 		color: var(--sys-color-on-surface-variant);
-		border: 1px solid transparent;
+		background: transparent;
+		border: var(--border-width) solid transparent;
 		border-color: var(--sys-color-outline-variant);
 		border-radius: 0.75rem;
+		corner-shape: squircle;
 		cursor: pointer;
 		transition:
 			color 180ms ease,
